@@ -1,0 +1,106 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Mark Gire",
+            "aboutMe": "Stuff About Me",
+            "availableLocations": [
+                {
+                    "city": "Florence, KY",
+                    "radius": "20 mi"
+                },
+                {
+                    "city": "Cincinnati, OH",
+                    "radius": "10 mi"
+                },
+                {
+                    "city": "Newport, KY",
+                    "radius": "15 mi"
+                }
+            ],
+            "availableServices": [
+                {
+                    "serviceType": "Lawn Mowing",
+                    "timeEstimate": "10min/acre",
+                    "price":
+                        {
+                            "paymentInfo": "N/A",
+                            "acceptedPaymentTypes": {
+                                "isVenmo": false,
+                                "isPaypal": true,
+                                "isCash": true
+                            }
+                        }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Daniel Hodge",
+            "aboutMe": "Stuff About Me",
+            "availableLocations": [
+                {
+                    "city": "Florence, KY",
+                    "radius": "20 mi"
+                },
+                {
+                    "city": "Cincinnati, OH",
+                    "radius": "10 mi"
+                },
+                {
+                    "city": "Newport, KY",
+                    "radius": "15 mi"
+                }
+            ],
+            "availableServices": [
+                {
+                    "serviceType": "Lawn Mowing",
+                    "timeEstimate": "10min/acre",
+                    "price":
+                        {
+                            "paymentInfo": "N/A",
+                            "acceptedPaymentTypes": {
+                                "isVenmo": false,
+                                "isPaypal": true,
+                                "isCash": true
+                            }
+                        }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Soso Sammy",
+            "aboutMe": "Stuff About Me",
+            "availableLocations": [
+                {
+                    "city": "Florence, KY",
+                    "radius": "20 mi"
+                },
+                {
+                    "city": "Cincinnati, OH",
+                    "radius": "10 mi"
+                },
+                {
+                    "city": "Newport, KY",
+                    "radius": "15 mi"
+                }
+            ],
+            "availableServices": [
+                {
+                    "serviceType": "Lawn Mowing",
+                    "timeEstimate": "10min/acre",
+                    "price":
+                        {
+                            "paymentInfo": "N/A",
+                            "acceptedPaymentTypes": {
+                                "isVenmo": false,
+                                "isPaypal": true,
+                                "isCash": true
+                            }
+                        }
+                }
+            ]
+        }
+    ]
+}
