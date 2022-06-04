@@ -2,12 +2,14 @@
     "data": [
         {
             "id": 1,
+            "type": "customer",
             "name": "Joe Customer",
             "address": "111 Farewell Ln",
             "city": "Independence",
             "state": "KY",
             "zip": "41051",
-            "lawnAcres": 4.2
+            "lawnAcres": 4.2,
+            "lawnSqFt": 44
         }
     ]
 }

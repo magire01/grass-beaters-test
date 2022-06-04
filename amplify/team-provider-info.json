@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-grassbeaeterapi-dev-203847-authRole",
+      "UnauthRoleArn": "arn:aws:iam::406572709390:role/amplify-grassbeaeterapi-dev-203847-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::406572709390:role/amplify-grassbeaeterapi-dev-203847-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-grassbeaeterapi-dev-203847-deployment",
+      "UnauthRoleName": "amplify-grassbeaeterapi-dev-203847-unauthRole",
+      "StackName": "amplify-grassbeaeterapi-dev-203847",
+      "StackId": "arn:aws:cloudformation:us-east-1:406572709390:stack/amplify-grassbeaeterapi-dev-203847/0f6002c0-cd9e-11ec-82f8-12b56e17f86b",
+      "AmplifyAppId": "d1sm0rnw8i7ujl"
+    }
+  }
+}

@@ -28,7 +28,7 @@ import ServiceSearch from './pages/ServiceSearch';
 const App = () => {
   const [page, setPage] = useState("home")
 
-  const [isAuth, setIsAuth] = useState(true)
+  const [isAuth, setIsAuth] = useState(false)
 
   // useEffect(() => {
   //   setIsAuth(true)
@@ -73,12 +73,13 @@ const App = () => {
         <Grid item md={12} xs={12}>
           <h2 style={{  textAlign: "center" }}>Grass Beaters</h2>
         </Grid>
+        <Grid item md={12} xs={12} style={{ textAlign: "center" }}>
+          <Button onClick={() => setPage("search")} style={(page == "search") ? style.buttonActive : style.button}>Search</Button>
+          <Button onClick={() => setPage("customer")} style={(page == "customer") ? style.buttonActive : style.button}>Customer</Button>
+          <Button onClick={() => setPage("contractor")} style={(page == "contractor") ? style.buttonActive : style.button}>Contractor</Button>
+        </Grid>
       </Grid>
     </AppBar>
-
-    <Container style={{ marginTop: 200 }}>
-      <CurrentPage />
-    </Container>
    </>
   );
 }

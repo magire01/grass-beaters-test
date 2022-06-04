@@ -2,26 +2,31 @@
     "data": [
         {
             "id": 1,
+            "type": "contractor",
             "name": "Mark Gire",
             "aboutMe": "Stuff About Me",
             "availableLocations": [
                 {
+                    "zip": "14441",
                     "city": "Florence, KY",
                     "radius": "20 mi"
                 },
                 {
+                    "zip": "14442",
                     "city": "Cincinnati, OH",
                     "radius": "10 mi"
                 },
                 {
+                    "zip": "22321",
                     "city": "Newport, KY",
                     "radius": "15 mi"
                 }
             ],
             "availableServices": [
                 {
+                    "serviceId": "0",
                     "serviceType": "Lawn Mowing",
-                    "timeEstimate": "10min/acre",
+                    "timeEstimate": "10min/sqft",
                     "price":
                         {
                             "paymentInfo": "N/A",
@@ -32,7 +37,11 @@
                             }
                         }
                 }
+            ],
+            "scheduledLawns": [
+                
             ]
+
         }
     ]
 }

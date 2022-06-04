@@ -5,17 +5,13 @@ import Button from "@mui/material/Button";
 
 import contractorAPI from "../utilities/contractor.json"
 
-const ContractorPage = () => {
+const AuthContractor = (props) => {
     let [contractor, setContractor] = useState({
         name: "",
         aboutMe: "",
         availableLocations: [""],
         availableServices: [""]
     });
-
-    useEffect(() => {
-        setContractor(contractorAPI.data[0])
-    }, [])
 
     const style = {
         card: {
@@ -60,4 +56,4 @@ const ContractorPage = () => {
     );
 }
 
-export default ContractorPage;
+export default AuthContractor;

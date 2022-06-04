@@ -3,18 +3,26 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import Button from "@mui/material/Button";
 
-import contractorAPI from "../utilities/contractor.json"
+import customerAPI from "../utilities/customer.json"
 
-const ContractorPage = () => {
-    let [contractor, setContractor] = useState({
+import { API }  from 'aws-amplify';
+
+const AuthCustomer = () => {
+    let [customer, setCustomer] = useState({
         name: "",
         aboutMe: "",
         availableLocations: [""],
         availableServices: [""]
     });
 
+    // const getCustomer = async () => {
+    //     API
+    //         .get("getCustomer", "/api/{custId}")
+    //         .then(print())
+    // }
+
     useEffect(() => {
-        setContractor(contractorAPI.data[0])
+        setCustomer(customerAPI.data[0])
     }, [])
 
     const style = {
@@ -31,33 +39,27 @@ const ContractorPage = () => {
             <Card style={style.card}>
                 <Grid container>
                     <Grid item md={12}>
-                        <h5>{contractor.name}</h5>
-                        <p>{contractor.aboutMe}</p>
+                        <h5>{customer.name}</h5>
                     </Grid>
-                </Grid>         
+                </Grid>
             </Card>
             <Card style={style.card}>
                 <Grid container>
                     <Grid item md={12}>
-                        <h5>Available Locations</h5>
-                        {contractor.availableLocations.map((location, index) => (
-                        <p key={index}>{location.city}</p>
-                        ))}
+                        <p>{customer.address}</p>
+                        <p>{customer.city}, {customer.state} {customer.zip}</p>
                     </Grid>
-                </Grid>  
+                </Grid>          
             </Card>
             <Card style={style.card}>
-                <Grid container>
+                 <Grid container>
                     <Grid item md={12}>
-                        <h5>Services</h5>
-                        {contractor.availableServices.map((service, index) => (
-                            <p key={index}>{service.serviceType}</p>
-                        ))}
+                        <p>{customer.lawnAcres} acres</p>
                     </Grid>
-                </Grid>  
+                </Grid>
             </Card>
-        </>
+        </> 
     );
 }
 
-export default ContractorPage;
+export default AuthCustomer;

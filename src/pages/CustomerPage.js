@@ -5,6 +5,8 @@ import Button from "@mui/material/Button";
 
 import customerAPI from "../utilities/customer.json"
 
+import { API }  from 'aws-amplify';
+
 const CustomerPage = () => {
     let [customer, setCustomer] = useState({
         name: "",
@@ -13,25 +15,50 @@ const CustomerPage = () => {
         availableServices: [""]
     });
 
+    // const getCustomer = async () => {
+    //     API
+    //         .get("getCustomer", "/api/{custId}")
+    //         .then(print())
+    // }
+
     useEffect(() => {
         setCustomer(customerAPI.data[0])
     }, [])
 
+    const style = {
+        card: {
+            width: "auto",
+            padding: 10,
+            margin: 10,
+            backgroundColor: "lightgreen"
+        }
+    }
+
     return (
-        <Grid container>
-            <Grid item md={12}>
-                <Card>
-                    <h5>{customer.name}</h5>
-                </Card>
-                <Card>
-                    <p>{customer.address}</p>
-                    <p>{customer.city}, {customer.state} {customer.zip}</p>
-                </Card>
-                <Card>
-                    <p>{customer.lawnAcres} acres</p>
-                </Card>
-            </Grid>
-        </Grid>
+        <>
+            <Card style={style.card}>
+                <Grid container>
+                    <Grid item md={12}>
+                        <h5>{customer.name}</h5>
+                    </Grid>
+                </Grid>
+            </Card>
+            <Card style={style.card}>
+                <Grid container>
+                    <Grid item md={12}>
+                        <p>{customer.address}</p>
+                        <p>{customer.city}, {customer.state} {customer.zip}</p>
+                    </Grid>
+                </Grid>          
+            </Card>
+            <Card style={style.card}>
+                 <Grid container>
+                    <Grid item md={12}>
+                        <p>{customer.lawnAcres} acres</p>
+                    </Grid>
+                </Grid>
+            </Card>
+        </> 
     );
 }
 
