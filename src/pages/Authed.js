@@ -4,10 +4,10 @@ import Card from '@mui/material/Card';
 import Button from "@mui/material/Button";
 
 import customerAPI from "../utilities/customer.json"
-import contractorData from "../utilities/contractor.json"
+import contractorAPI from "../utilities/contractor.json"
 
 const Authed = () => {
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState();
 
     // const getCustomer = async () => {
     //     API
@@ -17,10 +17,10 @@ const Authed = () => {
 
     const customerData = customerAPI.data[0]
 
-    const contractorData = contractorData.data[0]
+    const contractorData = contractorAPI.data[0]
 
     useEffect(() => {
-        setUser(customerData)
+        setUser(contractorData)
     }, [])
 
     const style = {
@@ -31,12 +31,9 @@ const Authed = () => {
             backgroundColor: "lightgreen"
         }
     }
+
     return (
-        <>
-            {(user.type == "customer")
-            ? <p>customer</p>
-            : <p>contractor</p>}
-        </>
+        <>test</>
     )
 }
 
